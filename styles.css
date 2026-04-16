@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --cream: #f4fbff;
   --ivory: #e7f2fb;
   --saffron: #2bb7d0;
@@ -64,6 +64,7 @@ button {
   justify-content: space-between;
   padding: 1.2rem 0;
   gap: 2rem;
+  position: relative;
 }
 
 .brand {
@@ -71,7 +72,6 @@ button {
   align-items: center;
   gap: 1rem;
 }
-
 
 .brand-mark {
   display: inline-flex;
@@ -115,10 +115,6 @@ button {
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 1.8px;
-}
-
-.header-inner {
-  position: relative;
 }
 
 .nav-toggle {
@@ -355,23 +351,16 @@ button {
 }
 
 .price-note {
-  margin-top: 0.6rem;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 1.6px;
-  color: rgba(12, 26, 43, 0.6);
-}
-
-.price-note {
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: rgba(12, 26, 43, 0.6);
 }
 
+/* Updated product-grid to handle any number of items beautifully */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   align-items: stretch;
 }
@@ -401,8 +390,6 @@ button {
   border-bottom: 1px solid rgba(18, 48, 89, 0.08);
 }
 
-/* Masala + sherbet packs have large built-in margins; "contain" keeps them intact.
-   Instead of cropping, give them a taller media area so the product stays fully visible. */
 #masala .product-card,
 #sherbet .product-card {
   grid-template-rows: 290px 1fr;
@@ -437,15 +424,11 @@ button {
 }
 
 .price {
-  font-family: "Cormorant Garamond", "Georgia", serif;
-  font-size: 1.2rem;
-  color: var(--clove);
-}
-
-.price {
   font-weight: 600;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   color: var(--clove);
+  font-family: "Cormorant Garamond", "Georgia", serif;
 }
 
 .button {
@@ -750,14 +733,3 @@ button {
     transition: none !important;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
