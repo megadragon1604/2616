@@ -1,13 +1,14 @@
 :root {
-  --cream: #f4fbff;
-  --ivory: #e7f2fb;
-  --saffron: #2bb7d0;
-  --copper: #1689c6;
-  --clove: #123059;
-  --onyx: #0c1a2b;
-  --rose: #7cc6e6;
-  --mist: rgba(255, 255, 255, 0.72);
-  --shadow: rgba(9, 28, 51, 0.18);
+  /* The new warm, spice-inspired palette */
+  --cream: #fffaf0;    
+  --ivory: #fdf5e6;    
+  --saffron: #e3a018;  
+  --copper: #c84b31;   
+  --clove: #3e2723;    
+  --onyx: #2d1b15;     
+  --rose: #e67c85;     
+  --mist: rgba(255, 255, 255, 0.85);
+  --shadow: rgba(62, 39, 35, 0.12); 
 }
 
 * {
@@ -23,7 +24,7 @@ html {
 body {
   font-family: "Manrope", "Segoe UI", sans-serif;
   color: var(--onyx);
-  background: radial-gradient(circle at top, #f6fcff 0%, #e7f2fb 45%, #dfeaf6 100%);
+  background: radial-gradient(circle at top, #fffaf4 0%, #fdf5e6 45%, #faedd9 100%);
   line-height: 1.6;
 }
 
@@ -54,8 +55,8 @@ button {
   top: 0;
   z-index: 10;
   backdrop-filter: blur(14px);
-  background: rgba(244, 251, 255, 0.85);
-  border-bottom: 1px solid rgba(18, 48, 89, 0.12);
+  background: rgba(255, 250, 240, 0.85);
+  border-bottom: 1px solid rgba(62, 39, 35, 0.12);
 }
 
 .header-inner {
@@ -73,19 +74,6 @@ button {
   gap: 1rem;
 }
 
-.brand-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--copper), var(--saffron));
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
 .brand-name {
   font-family: "Cormorant Garamond", "Georgia", serif;
   font-size: 1.35rem;
@@ -97,7 +85,7 @@ button {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgba(12, 26, 43, 0.68);
+  color: rgba(45, 27, 21, 0.68);
 }
 
 .brand-logo {
@@ -105,7 +93,7 @@ button {
   height: auto;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 8px 16px rgba(12, 26, 43, 0.18));
+  filter: drop-shadow(0 8px 16px rgba(62, 39, 35, 0.12));
 }
 
 .site-nav {
@@ -114,7 +102,7 @@ button {
   gap: 1.5rem;
   font-size: 0.95rem;
   text-transform: uppercase;
-  letter-spacing: 1.8px;
+  letter-spacing: 1.5px; 
 }
 
 .nav-toggle {
@@ -124,13 +112,13 @@ button {
   width: 44px;
   height: 44px;
   border-radius: 999px;
-  border: 1px solid rgba(18, 48, 89, 0.18);
+  border: 1px solid rgba(62, 39, 35, 0.18);
   background: rgba(255, 255, 255, 0.65);
-  box-shadow: 0 12px 22px rgba(12, 26, 43, 0.12);
+  box-shadow: 0 12px 22px rgba(62, 39, 35, 0.1);
 }
 
 .nav-toggle:focus-visible {
-  outline: 3px solid rgba(43, 183, 208, 0.45);
+  outline: 3px solid rgba(227, 160, 24, 0.45);
   outline-offset: 2px;
 }
 
@@ -206,7 +194,7 @@ button {
   padding: 0.6rem 1.4rem;
   border-radius: 999px;
   border: 1px solid var(--copper);
-  background: rgba(22, 137, 198, 0.12);
+  background: rgba(200, 75, 49, 0.08);
 }
 
 .hero {
@@ -219,8 +207,8 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 15% 15%, rgba(43, 183, 208, 0.32), transparent 55%),
-    radial-gradient(circle at 85% 25%, rgba(22, 137, 198, 0.32), transparent 60%);
+  background: radial-gradient(circle at 15% 15%, rgba(227, 160, 24, 0.15), transparent 55%),
+    radial-gradient(circle at 85% 25%, rgba(200, 75, 49, 0.1), transparent 60%);
   pointer-events: none;
 }
 
@@ -238,12 +226,13 @@ button {
   font-size: clamp(2.8rem, 4vw, 4.2rem);
   font-weight: 600;
   margin: 1rem 0 1.5rem;
+  color: var(--clove);
 }
 
 .hero-eyebrow {
   text-transform: uppercase;
-  letter-spacing: 3px;
-  color: rgba(12, 26, 43, 0.68);
+  letter-spacing: 2px;
+  color: rgba(45, 27, 21, 0.68);
   font-size: 0.85rem;
 }
 
@@ -265,55 +254,12 @@ button {
   gap: 1.5rem;
 }
 
-.stat-value {
-  font-family: "Cormorant Garamond", "Georgia", serif;
-  font-size: 2rem;
-  color: var(--copper);
-}
-
 .stat-label {
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   font-size: 0.75rem;
-  color: rgba(12, 26, 43, 0.68);
-}
-
-.hero-visual {
-  display: grid;
-  gap: 1.8rem;
-}
-
-.hero-card {
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 24px 50px var(--shadow);
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  min-height: 260px;
-}
-
-.hero-card.alt {
-  transform: translateX(12px);
-}
-
-.hero-card img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.hero-card-body {
-  padding: 1.8rem;
-  display: grid;
-  gap: 0.7rem;
-}
-
-.card-eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.75rem;
-  color: rgba(12, 26, 43, 0.6);
+  color: rgba(45, 27, 21, 0.68);
+  font-weight: 600;
 }
 
 .collection {
@@ -321,7 +267,7 @@ button {
 }
 
 .collection.alt {
-  background: rgba(231, 242, 251, 0.7);
+  background: rgba(253, 245, 230, 0.7); 
 }
 
 .section-head {
@@ -336,28 +282,28 @@ button {
 .section-head h2 {
   font-family: "Cormorant Garamond", "Georgia", serif;
   font-size: clamp(2rem, 3vw, 2.8rem);
+  color: var(--clove);
 }
 
 .section-eyebrow {
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-size: 0.75rem;
-  color: rgba(12, 26, 43, 0.6);
+  color: rgba(45, 27, 21, 0.6);
 }
 
 .section-note {
   max-width: 360px;
-  color: rgba(12, 26, 43, 0.68);
+  color: rgba(45, 27, 21, 0.68);
 }
 
 .price-note {
   font-size: 0.78rem;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: rgba(12, 26, 43, 0.6);
+  letter-spacing: 1px;
+  color: rgba(45, 27, 21, 0.6);
 }
 
-/* Updated product-grid to handle any number of items beautifully */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -366,64 +312,41 @@ button {
 }
 
 .product-card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid rgba(18, 48, 89, 0.12);
-  box-shadow: 0 14px 30px rgba(12, 26, 43, 0.1);
-  display: grid;
-  grid-template-rows: 240px 1fr;
-  min-height: 460px;
+  border: 1px solid rgba(62, 39, 35, 0.08);
+  box-shadow: 0 14px 30px rgba(62, 39, 35, 0.06);
+  display: flex;
+  flex-direction: column;
   height: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  padding: 14px;
-  background: radial-gradient(circle at 25% 18%, rgba(43, 183, 208, 0.16), transparent 58%),
-    radial-gradient(circle at 82% 12%, rgba(22, 137, 198, 0.14), transparent 64%),
-    linear-gradient(180deg, #ffffff 0%, rgba(231, 242, 251, 0.6) 100%);
-  border-bottom: 1px solid rgba(18, 48, 89, 0.08);
-}
-
-#masala .product-card,
-#sherbet .product-card {
-  grid-template-rows: 290px 1fr;
-}
-
-#masala .product-card img,
-#sherbet .product-card img {
-  object-fit: contain;
-  object-position: center;
-  padding: 10px;
-  background: radial-gradient(circle at 30% 12%, rgba(255, 255, 255, 0.95), rgba(231, 242, 251, 0.6));
-  filter: contrast(1.03) saturate(1.02);
+  aspect-ratio: 1 / 1; 
+  object-fit: contain; 
+  padding: 0; 
+  background: transparent; 
+  border-bottom: 1px solid rgba(62, 39, 35, 0.05); 
 }
 
 .product-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 22px 40px rgba(12, 26, 43, 0.2);
+  box-shadow: 0 22px 40px rgba(62, 39, 35, 0.12);
 }
 
 .product-body {
   padding: 1.5rem;
-  display: grid;
-  grid-template-rows: auto auto 1fr auto auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   gap: 0.7rem;
 }
 
-.badge {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.65rem;
-  color: var(--copper);
-}
-
-.price {
+.product-body .price {
+  margin-top: auto; 
   font-weight: 600;
   font-size: 1.2rem;
   letter-spacing: 1px;
@@ -437,19 +360,19 @@ button {
   background: var(--clove);
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   font-size: 0.75rem;
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .button.primary {
-  background: linear-gradient(135deg, var(--clove), var(--copper));
+  background: linear-gradient(135deg, var(--copper), var(--clove));
 }
 
 .button.ghost {
   background: transparent;
   color: var(--clove);
-  border: 1px solid rgba(18, 48, 89, 0.4);
+  border: 1px solid rgba(62, 39, 35, 0.3);
 }
 
 .button.small {
@@ -476,8 +399,8 @@ button {
   background: rgba(255, 255, 255, 0.85);
   padding: 2.2rem;
   border-radius: 24px;
-  border: 1px solid rgba(18, 48, 89, 0.12);
-  box-shadow: 0 18px 36px rgba(12, 26, 43, 0.14);
+  border: 1px solid rgba(62, 39, 35, 0.08);
+  box-shadow: 0 18px 36px rgba(62, 39, 35, 0.08);
 }
 
 .story-panel ul {
@@ -500,12 +423,12 @@ button {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--copper);
+  background: var(--saffron);
 }
 
 .contact {
   padding: 4.5rem 0 6rem;
-  background: linear-gradient(180deg, rgba(244, 251, 255, 0) 0%, rgba(214, 233, 247, 0.7) 100%);
+  background: linear-gradient(180deg, rgba(253, 245, 230, 0) 0%, rgba(227, 160, 24, 0.08) 100%);
 }
 
 .contact-grid {
@@ -521,7 +444,7 @@ button {
   background: rgba(255, 255, 255, 0.92);
   padding: 2rem;
   border-radius: 20px;
-  border: 1px solid rgba(18, 48, 89, 0.12);
+  border: 1px solid rgba(62, 39, 35, 0.08);
 }
 
 .contact-card p {
@@ -532,9 +455,16 @@ button {
   margin-bottom: 0.5rem;
 }
 
+.contact-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
 .site-footer {
   padding: 2.5rem 0 3rem;
-  border-top: 1px solid rgba(18, 48, 89, 0.15);
+  border-top: 1px solid rgba(62, 39, 35, 0.1);
 }
 
 .footer-inner {
@@ -557,11 +487,11 @@ button {
   display: grid;
   gap: 0.4rem;
   font-size: 0.9rem;
-  color: rgba(12, 26, 43, 0.75);
+  color: rgba(45, 27, 21, 0.75);
 }
 
 .footer-note {
-  color: rgba(12, 26, 43, 0.6);
+  color: rgba(45, 27, 21, 0.6);
 }
 
 @media (max-width: 900px) {
@@ -576,33 +506,6 @@ button {
 
   .product-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .product-card {
-    grid-template-rows: 220px 1fr;
-    min-height: 440px;
-  }
-
-  #masala .product-card,
-  #sherbet .product-card {
-    grid-template-rows: 260px 1fr;
-  }
-
-  .product-card img {
-    padding: 12px;
-  }
-
-  #masala .product-card img,
-  #sherbet .product-card img {
-    padding: 10px;
-  }
-
-  .hero-card {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-card.alt {
-    transform: none;
   }
 }
 
@@ -648,10 +551,10 @@ button {
     gap: 0.25rem;
     padding: 0.75rem;
     border-radius: 18px;
-    background: rgba(244, 251, 255, 0.97);
+    background: rgba(255, 250, 240, 0.97); 
     backdrop-filter: blur(18px);
-    border: 1px solid rgba(18, 48, 89, 0.14);
-    box-shadow: 0 20px 55px rgba(12, 26, 43, 0.18);
+    border: 1px solid rgba(62, 39, 35, 0.08);
+    box-shadow: 0 20px 55px rgba(62, 39, 35, 0.12);
     max-height: min(70vh, 520px);
     overflow: auto;
     -webkit-overflow-scrolling: touch;
@@ -668,13 +571,13 @@ button {
 
   .js .site-nav a:hover,
   .js .site-nav a:focus-visible {
-    background: rgba(22, 137, 198, 0.1);
+    background: rgba(200, 75, 49, 0.05); 
   }
 
   .js .site-nav .nav-cta {
     text-align: center;
     margin-top: 0.25rem;
-    background: rgba(22, 137, 198, 0.14);
+    background: rgba(200, 75, 49, 0.08);
   }
 
   .js .site-header[data-nav-open="true"] .site-nav {
@@ -708,16 +611,6 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .product-card {
-    grid-template-rows: 240px 1fr;
-    min-height: auto;
-  }
-
-  #masala .product-card,
-  #sherbet .product-card {
-    grid-template-rows: 280px 1fr;
-  }
-
   .brand-logo {
     width: 84px;
   }
@@ -732,4 +625,16 @@ button {
     scroll-behavior: auto;
     transition: none !important;
   }
+}
+
+/* --- Animation Classes --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
